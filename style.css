@@ -1,0 +1,22 @@
+:root {
+    /* Background Colors */
+    --color-bg-dark: #1a202c; /* Body background */
+    --color-bg-medium: #2d3748; /* Canvas background / Message box background */
+    --color-border-medium: #4a5568; /* Canvas border / Message box border */
+
+    /* Text Colors */
+    --color-text-light: #e2e8f0; /* General light text */
+    --color-text-status: #a0aec0; /* Game status text (Tailwind gray-400) */
+    --color-title-purple: #a78bfa; /* Main title color (Tailwind purple-400) */
+
+    /* Game Element Colors */
+    --color-snake-fill: #68d391; /* Snake fill color */
+    --color-snake-stroke: #48bb78; /* Snake stroke color */
+    --color-food-fill: #fc8181; /* Food fill color */
+    --color-food-stroke: #e53e3e; /* Food stroke color */
+
+    /* Button Colors */
+    --color-button-gradient-start: #6366f1; /* Button gradient start (purple) */
+    --color-button-gradient-end: #8b5cf6; /* Button gradient end (lighter purple) */
+    --color-button-text: white; /* Button text color */
+}
