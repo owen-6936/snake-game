@@ -20,7 +20,7 @@ This project highlights proficiency in client-side JavaScript development, respo
 
 - **HTML5:** For the basic structure of the game.
 
-- **CSS3:** For styling, utilizing [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) for a maintainable color palette and [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
+- **CSS3:** For styling, utilizing [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) for a maintainable color palette and For styling, and general CSS properties for visual design.
 
 - **JavaScript (Vanilla JS):** For all game logic, interaction, and rendering on the HTML Canvas.
 
@@ -29,11 +29,9 @@ This project highlights proficiency in client-side JavaScript development, respo
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/your-github-username/snake-game.git](https://github.com/your-github-username/snake-game.git)
+   git clone [https://github.com/owen-6936/snake-game.git](https://github.com/owen-6936/snake-game.git)
 
    ```
-
-   (Remember to replace `your-github-username` with your actual GitHub username)
 
 2. **Navigate to the project directory:**
 
