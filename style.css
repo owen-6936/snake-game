@@ -1,22 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 :root {
-    /* Background Colors */
-    --color-bg-dark: #1a202c; /* Body background */
-    --color-bg-medium: #2d3748; /* Canvas background / Message box background */
-    --color-border-medium: #4a5568; /* Canvas border / Message box border */
+  /* Font Variables*/
+  --font-family-primary: "Inter", sans-serif; /* For most body text and general app elements */
+  --font-family-game-title: "Press Start 2P", cursive;
 
-    /* Text Colors */
-    --color-text-light: #e2e8f0; /* General light text */
-    --color-text-status: #a0aec0; /* Game status text (Tailwind gray-400) */
-    --color-title-purple: #a78bfa; /* Main title color (Tailwind purple-400) */
+  /* Background Colors */
+  --color-bg-dark: #1a202c; /* Body background */
+  --color-bg-medium: #2d3748; /* Canvas background / Message box background */
+  --color-border-medium: #4a5568; /* Canvas border / Message box border */
 
-    /* Game Element Colors */
-    --color-snake-fill: #68d391; /* Snake fill color */
-    --color-snake-stroke: #48bb78; /* Snake stroke color */
-    --color-food-fill: #fc8181; /* Food fill color */
-    --color-food-stroke: #e53e3e; /* Food stroke color */
+  /* Text Colors */
+  --color-text-light: #e2e8f0; /* General light text */
+  --color-text-status: #a0aec0; /* Game status text (Tailwind gray-400) */
+  --color-title-purple: #a78bfa; /* Main title color (Tailwind purple-400) */
 
-    /* Button Colors */
-    --color-button-gradient-start: #6366f1; /* Button gradient start (purple) */
-    --color-button-gradient-end: #8b5cf6; /* Button gradient end (lighter purple) */
-    --color-button-text: white; /* Button text color */
+  /* Game Element Colors */
+  --color-snake-fill: #68d391; /* Snake fill color */
+  --color-snake-stroke: #48bb78; /* Snake stroke color */
+  --color-food-fill: #fc8181; /* Food fill color */
+  --color-food-stroke: #e53e3e; /* Food stroke color */
+
+  /* Button Colors */
+  --color-button-gradient-start: #6366f1; /* Button gradient start (purple) */
+  --color-button-gradient-end: #8b5cf6; /* Button gradient end (lighter purple) */
+  --color-button-text: white; /* Button text color */
+}
+body {
+  font-family: var(--font-family-primary);
+}
+#game-container {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3.75rem;
+}
+#game-canvas {
+  border-radius: 10px;
+}
+#game-title {
+  font-family: var(--font-family-game-title);
 }
