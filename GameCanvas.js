@@ -1,9 +1,17 @@
 "use strict";
-import { GameAsset } from "./GameAsset.js";
+import { GameAsset, Drawer } from "./GameAsset.js";
 class GameCanvas extends GameAsset {
-  constructor(canvasElement) {
+  constructor(canvasElement, canvasBgColor) {
     super();
     this.element = canvasElement;
+    this.canvasBgColor =
+      canvasBgColor ||
+      getComputedStyle(document.documentElement)
+        .getPropertyValue("--color-bg-medium")
+        .trim();
+  }
+  get context() {
+    return this.element.getContext("2d");
   }
 
   get width() {
@@ -19,6 +27,18 @@ class GameCanvas extends GameAsset {
 
   set height(newHeight) {
     this.element.height = newHeight;
+  }
+
+  paint() {
+    Drawer.drawRect({
+      x: 0,
+      y: 0,
+      context: this.context,
+      fillStyle: this.canvasBgColor,
+      stroke: false,
+      width: this.width,
+      height: this.height,
+    });
   }
 }
 

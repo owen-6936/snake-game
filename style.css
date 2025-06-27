@@ -27,14 +27,19 @@
   --color-button-gradient-end: #8b5cf6; /* Button gradient end (lighter purple) */
   --color-button-text: white; /* Button text color */
 }
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: var(--font-family-primary);
+  margin: 0;
 }
 #game-container {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
   border-radius: 10px;
   display: flex;
+  height: 100vh;
   flex-flow: column;
   align-items: center;
   justify-content: center;
