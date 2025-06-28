@@ -19,15 +19,21 @@ class Snake extends GameAsset {
     return this.bodyParts.length;
   }
   addBodypart() {}
-  draw(context) {
+  paint(context) {
     for (const part of this.bodyParts) {
       Drawer.drawRect({
         context,
-        x: part.x,
-        y: part.y,
+        x: part.x * this.gridSize,
+        y: part.y * this.gridSize,
         strokeStyle: this.snakeBorderColor,
         fillStyle: this.snakeColor,
       });
+    }
+  }
+  reAlignBodyParts(offset) {
+    for (const part of this.bodyParts) {
+      part.x += offset;
+      part.y += offset;
     }
   }
 }

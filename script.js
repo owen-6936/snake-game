@@ -1,19 +1,36 @@
 "use strict";
-import { Drawer } from "./GameAsset.js";
 import { GameCanvas } from "./GameCanvas.js";
 import { Snake } from "./Snake.js";
 import { SnakeFood } from "./SnakeFood.js";
 
 function initializeGame() {
   const canvasElement = document.querySelector("#game-canvas");
-  const gameCanvas = new GameCanvas(canvasElement);
+  const gameCanvas = new GameCanvas({ canvasElement });
   /** @type {CanvasRenderingContext2D} */
   const context = gameCanvas.context;
-  const snake = new Snake({ snakeHead: { x: 140, y: 140 } });
+  const initialGridX = Math.floor(gameCanvas.width / gameCanvas.gridSize / 2);
+  const initialGridY = Math.floor(gameCanvas.height / gameCanvas.gridSize / 2);
+  const snake = new Snake({ snakeHead: { x: initialGridX, y: initialGridY } });
   const snakeFood = new SnakeFood();
+  handleScreenResize();
+  function paintGameAssests(context) {
+    gameCanvas.paint();
+    snake.paint(context);
+  }
+  function alignGameAssets() {
+    let sizes = gameCanvas.resize();
+    /* the current size - previous size / sides to account for gridX 1 + gridY 1 = 2 */
+    let pixelOffset = (sizes[1] - sizes[0]) / 2;
+    let gridOffset = pixelOffset / snake.gridSize;
+    snake.reAlignBodyParts(gridOffset);
+  }
+  function handleScreenResize() {
+    alignGameAssets();
+    paintGameAssests(context);
+    console.log(snake.bodyParts);
+  }
 
-  gameCanvas.paint();
-  snake.draw(context);
+  window.addEventListener("resize", handleScreenResize);
 }
 
 initializeGame();

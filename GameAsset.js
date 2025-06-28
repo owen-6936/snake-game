@@ -1,8 +1,6 @@
 "use strict";
 class GameAsset {
-  constructor() {
-    this.gridSize = 20;
-  }
+  gridSize = 20;
 }
 
 class Drawer {
