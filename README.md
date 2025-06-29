@@ -29,7 +29,7 @@ This project highlights proficiency in client-side JavaScript development, respo
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/owen-6936/snake-game.git](https://github.com/owen-6936/snake-game.git)
+   git clone https://github.com/owen-6936/snake-game.git
 
    ```
 
